@@ -50,6 +50,16 @@
   align-content: flex-start;
   justify-items: center;
   text-align: center;
+
+  .title {
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    color: var(--clr-main);
+  }
+
+  p {
+    font-size: var(--fs-xs);
+  }
 }
 
 $clr-gold: #d2bc5f;
@@ -90,4 +100,12 @@ $clr-gold: #d2bc5f;
 #cursorFrame {
   // hide both on small devices
   display: none;
+}
+
+@media screen and (min-width: 56.25rem) {
+  #cursor,
+  #cursorFrame {
+    // hide both on small devices
+    display: initial;
+  }
 }
