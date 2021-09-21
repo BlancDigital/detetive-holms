@@ -1,0 +1,20 @@
+@use "sass:color";
+
+@mixin pulse-anim($name, $color: #fff) {
+  @keyframes #{$name} {
+    0% {
+      box-shadow: 0 0 0 0 color.scale($color, $alpha: -30%);
+      transform: scale(0.99);
+    }
+
+    70% {
+      box-shadow: 0 0 0 0.3125em color.scale($color, $alpha: -100%);
+      transform: scale(1);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0.3125em color.scale($color, $alpha: -100%);
+      transform: scale(0.99);
+    }
+  }
+}

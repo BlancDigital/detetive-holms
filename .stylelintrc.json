@@ -1,0 +1,9 @@
+{
+  "extends": ["stylelint-config-recess-order"],
+  "rules": {
+    "color-no-invalid-hex": true,
+    "font-family-no-duplicate-names": true,
+    "unit-no-unknown": true,
+    "unit-case": "lower"
+  }
+}

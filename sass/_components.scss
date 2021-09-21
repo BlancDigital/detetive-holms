@@ -1,0 +1,93 @@
+@use "./animations";
+
+// BUTTON
+.btn {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 25rem;
+  padding: 0.65em 1.2em;
+  font-size: clamp(1.25rem, 1.1524rem + 0.4878vw, 1.5rem);
+  font-weight: 600;
+  // pre-defined border to prevent layout-shift
+  color: var(--clr-white);
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  border: 0.375rem solid var(--clr-main);
+  border-radius: 0.25em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 0.375em 0.75em -0.125em,
+    rgba(0, 0, 0, 0.3) 0px 0.1875em 0.4375em -0.1875em;
+  transition: opacity 250ms ease-in;
+  animation: pulse-gold 2s infinite;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:focus-visible {
+  border: 0.375rem solid var(--clr-black);
+  outline: none;
+  transform: scale(1.025);
+}
+
+// CARDS
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 4rem;
+  justify-items: center;
+}
+
+.cards__card {
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+  gap: 1rem;
+  align-content: flex-start;
+  justify-items: center;
+  text-align: center;
+}
+
+$clr-gold: #d2bc5f;
+@include animations.pulse-anim(pulse-gold, $clr-gold);
+
+#cursor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+  //   background-color: #fff;
+  background-image: url(../public/images/search-solid.svg);
+  //   border-radius: 50%;
+  //   mix-blend-mode: difference;
+  transition: 0.1s all linear;
+  transform: translate(-50%, -50%);
+}
+
+#cursorFrame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  width: 120px;
+  height: 120px;
+  pointer-events: none;
+  background-color: var(--clr-white);
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: 0.1s all linear;
+  transform: translate(-70%, -70%);
+}
+
+#cursor,
+#cursorFrame {
+  // hide both on small devices
+  display: none;
+}
