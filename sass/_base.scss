@@ -15,7 +15,7 @@
   --ff-montserrat: "Montserrat", sans-serif;
   --ff-roboto: "Roboto", sans-serif;
 
-  --fs-xs: clamp(1rem, 0.8846rem + 0.5128vw, 1.15rem);
+  --fs-xs: clamp(1.15rem, 1.0134rem + 0.6829vw, 1.5rem);
   --fs-md: clamp(1.3125rem, 1.1797rem + 0.625vw, 1.625rem);
   --fs-lg: clamp(1.625rem, 1.4055rem + 1.0976vw, 2.1875rem);
   --fs-xlg: clamp(2.1875rem, 1.5234rem + 3.125vw, 3.75rem);
@@ -65,6 +65,7 @@ h4,
 h5,
 h6 {
   font-family: var(--ff-montserrat);
+  line-height: 1.2;
   color: var(--clr-main);
 }
 
