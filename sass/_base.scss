@@ -14,6 +14,7 @@
 
   --ff-montserrat: "Montserrat", sans-serif;
   --ff-roboto: "Roboto", sans-serif;
+  --ff-merriweather: "Merriweather", serif;
 
   --fs-xs: clamp(1.15rem, 1.0134rem + 0.6829vw, 1.5rem);
   --fs-md: clamp(1.3125rem, 1.1797rem + 0.625vw, 1.625rem);
@@ -64,7 +65,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--ff-montserrat);
+  font-family: var(--ff-merriweather);
   line-height: 1.2;
   color: var(--clr-main);
 }
