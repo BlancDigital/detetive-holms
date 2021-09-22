@@ -87,25 +87,72 @@ $clr-gold: #d2bc5f;
   transform: translate(-50%, -50%);
 }
 
-#cursorFrame {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 10;
-  width: 120px;
-  height: 120px;
-  pointer-events: none;
-  background-color: var(--clr-white);
-  border-radius: 50%;
-  mix-blend-mode: difference;
-  transition: 0.1s all linear;
-  transform: translate(-70%, -70%);
+// DEPOIMENTO
+
+.depoimentos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5em;
+  justify-items: center;
+  width: 100%;
 }
 
-#cursor,
-#cursorFrame {
-  // hide both on small devices
-  display: none;
+.depoimentos.flickity-viewport {
+  padding: 0;
+}
+
+.depoimento {
+  display: grid;
+  grid-template-rows: 3rem 1fr;
+  gap: 1em;
+  align-content: center;
+  justify-items: center;
+  width: 100%;
+  height: auto;
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+  background-color: #262626;
+  border-radius: 0.5rem;
+  transition: transform 0.25s ease-in-out;
+
+  .stars {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  img + img {
+    margin-left: 0.25rem;
+  }
+
+  .title {
+    font-size: var(--fs-md);
+    color: var(--clr-main);
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .desc {
+    font-weight: 300;
+    text-align: left;
+  }
+
+  .author {
+    padding-top: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+  }
+}
+
+.depoimento:hover {
+  transform: scale(1.01);
 }
 
 @media screen and (min-width: 56.25rem) {
@@ -115,3 +162,24 @@ $clr-gold: #d2bc5f;
     display: initial;
   }
 }
+
+// #cursorFrame {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   z-index: 10;
+//   width: 120px;
+//   height: 120px;
+//   pointer-events: none;
+//   background-color: var(--clr-white);
+//   border-radius: 50%;
+//   mix-blend-mode: difference;
+//   transition: 0.1s all linear;
+//   transform: translate(-70%, -70%);
+// }
+
+// #cursor,
+// #cursorFrame {
+//   // hide both on small devices
+//   display: none;
+// }
