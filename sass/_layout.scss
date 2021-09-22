@@ -14,8 +14,10 @@
   }
 
   .btn--full {
-    padding: 0.325em 0.65em;
+    max-width: 14rem;
+    padding: 0.155em 0.325em;
     margin-top: clamp(0.25rem, -0.0427rem + 1.4634vw, 1rem);
+    font-size: clamp(1rem, 0.9415rem + 0.2927vw, 1.15rem);
   }
 
   .title-wrapper {
@@ -182,6 +184,30 @@
     margin-top: 4rem;
   }
 }
+
+// SECTION-TESTIMONIALS
+.section-testimonials {
+  padding-bottom: 11vh;
+
+  h3 {
+    font-family: "Crete Round", serif;
+  }
+
+  .btn {
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+}
+
+// FOOTER
+.footer {
+  p {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// ===== MEDIA QUERIES ======
 
 @media screen and (min-width: 37.5rem) {
   .section-videos {
