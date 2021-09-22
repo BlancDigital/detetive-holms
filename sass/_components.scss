@@ -24,16 +24,24 @@
   animation: pulse-gold 2s infinite;
 }
 
+.btn--full {
+  color: var(--clr-black);
+  background-color: var(--clr-main);
+}
+
 .btn:hover {
   background-color: var(--clr-main);
   opacity: 0.8;
 }
 
 .btn:focus-visible {
-  border: 0.375rem solid var(--clr-black);
+  border: 0.375rem solid var(--clr-white);
   outline: none;
   transform: scale(1.025);
 }
+
+$clr-gold: #d2bc5f;
+@include animations.pulse-anim(pulse-gold, $clr-gold);
 
 // CARDS
 
@@ -62,9 +70,6 @@
     font-size: var(--fs-xs);
   }
 }
-
-$clr-gold: #d2bc5f;
-@include animations.pulse-anim(pulse-gold, $clr-gold);
 
 #cursor {
   position: absolute;
