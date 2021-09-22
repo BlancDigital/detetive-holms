@@ -13,6 +13,7 @@
   --clr-black: #000;
   --ff-montserrat: "Montserrat", sans-serif;
   --ff-roboto: "Roboto", sans-serif;
+  --ff-merriweather: "Merriweather", serif;
   --fs-xs: clamp(1.15rem, 1.0134rem + 0.6829vw, 1.5rem);
   --fs-md: clamp(1.3125rem, 1.1797rem + 0.625vw, 1.625rem);
   --fs-lg: clamp(1.625rem, 1.4055rem + 1.0976vw, 2.1875rem);
@@ -62,7 +63,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--ff-montserrat);
+  font-family: var(--ff-merriweather);
   line-height: 1.2;
   color: var(--clr-main);
 }
@@ -231,24 +232,64 @@ select {
   transform: translate(-50%, -50%);
 }
 
-#cursorFrame {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 10;
-  width: 120px;
-  height: 120px;
-  pointer-events: none;
-  background-color: var(--clr-white);
-  border-radius: 50%;
-  mix-blend-mode: difference;
-  transition: 0.1s all linear;
-  transform: translate(-70%, -70%);
+.depoimentos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5em;
+  justify-items: center;
+  width: 100%;
 }
 
-#cursor,
-#cursorFrame {
-  display: none;
+.depoimentos.flickity-viewport {
+  padding: 0;
+}
+
+.depoimento {
+  display: grid;
+  grid-template-rows: 3rem 1fr;
+  gap: 1em;
+  align-content: center;
+  justify-items: center;
+  width: 100%;
+  height: auto;
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+  background-color: #262626;
+  border-radius: 0.5rem;
+  transition: transform 0.25s ease-in-out;
+}
+.depoimento .stars {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+.depoimento img {
+  max-width: 100%;
+  height: auto;
+}
+.depoimento img + img {
+  margin-left: 0.25rem;
+}
+.depoimento .title {
+  font-size: var(--fs-md);
+  color: var(--clr-main);
+  text-align: left;
+  text-transform: uppercase;
+}
+.depoimento .desc {
+  font-weight: 300;
+  text-align: left;
+}
+.depoimento .author {
+  padding-top: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.depoimento:hover {
+  transform: scale(1.01);
 }
 
 @media screen and (min-width: 56.25rem) {
@@ -271,8 +312,10 @@ select {
   justify-content: center;
 }
 .section-hero .btn--full {
-  padding: 0.325em 0.65em;
+  max-width: 14rem;
+  padding: 0.155em 0.325em;
   margin-top: clamp(0.25rem, -0.0427rem + 1.4634vw, 1rem);
+  font-size: clamp(1rem, 0.9415rem + 0.2927vw, 1.15rem);
 }
 .section-hero .title-wrapper {
   display: flex;
@@ -411,6 +454,22 @@ select {
 .section-videos .btn {
   margin: 0 auto;
   margin-top: 4rem;
+}
+
+.section-testimonials {
+  padding-bottom: 11vh;
+}
+.section-testimonials h3 {
+  font-family: "Crete Round", serif;
+}
+.section-testimonials .btn {
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.footer p {
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (min-width: 37.5rem) {
