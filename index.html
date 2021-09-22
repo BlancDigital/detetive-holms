@@ -34,12 +34,20 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="preload"
+      href="./libs/lite-youtube/lite-yt-embed.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
     <title>Document</title>
   </head>
   <body>
     <!-- #SECTION HERO -->
     <div class="section-hero">
       <div class="section-center">
+        <div class="btn btn--full">Seja um franqueado!</div>
+
         <div class="title-wrapper">
           <h1>DETETIVE</h1>
           <img src="./public/images/logo.png" alt="" />
@@ -49,7 +57,7 @@
         <p>Se você desconfia, podemos confirmar.</p>
 
         <div class="links">
-          <div class="btn">Saiba mais</div>
+          <button class="btn">Saiba mais</button>
           <!-- <div class="btn"></div> -->
         </div>
       </div>
@@ -111,6 +119,7 @@
     <!-- SECTION-SERVICES -->
     <section class="section-services">
       <div class="section-center">
+        <button class="btn btn--full">Fale conosco</button>
         <h3>Nossos serviços</h3>
         <div class="cards">
           <!-- start of item -->
@@ -194,6 +203,8 @@
           </div>
           <!-- end of item -->
         </div>
+
+        <button class="btn btn--full">Fale conosco</button>
       </div>
     </section>
 
@@ -203,9 +214,32 @@
         <p>Clona zap pra saber do seu conjuguê</p>
       </div>
     </section>
+    <!-- #SECTION-VIDEOS -->
+    <section class="section-videos">
+      <div class="section-center">
+        <h3>Nossa equipe</h3>
+
+        <div class="videos">
+          <lite-youtube
+            videoid="r72z52AOiGI"
+            playlabel="Holms Detetives - Apresentação"
+            params="controls=1&autoplay=1"
+          ></lite-youtube>
+
+          <lite-youtube
+            videoid="o8n2FqfzZgk"
+            playlabel="Holms Detetive"
+            params="controls=1&autoplay=1"
+          ></lite-youtube>
+        </div>
+
+        <button class="btn btn--full">Fale conosco</button>
+      </div>
+    </section>
 
     <section class="teste"></section>
 
+    <script src="./libs/lite-youtube/lite-ytb-embed.js" async defer></script>
     <script src="./main.js"></script>
   </body>
 </html>
