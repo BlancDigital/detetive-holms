@@ -18,3 +18,35 @@
     }
   }
 }
+
+@keyframes slideInRight {
+  0% {
+    visibility: visible;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes afr {
+  0% {
+    opacity: 0;
+    transform: translateX(3.125rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-0.3125rem);
+  }
+}
