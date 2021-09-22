@@ -20,6 +20,10 @@
     align-items: center;
   }
 
+  h1 {
+    font-size: var(--fs-xlg);
+  }
+
   p {
     font-size: var(--fs-md);
     text-align: center;
@@ -55,14 +59,13 @@
 }
 
 // SECTION DRONE
-.section-drone {
+.section-banner {
   position: relative;
-  //   height: 20vh;
   padding-bottom: 2em;
-  //   overflow-y: hidden;
   background-image: url(../public/images/2.png);
   background-attachment: fixed;
   background-position: center;
+  border-block: 0.125rem solid var(--clr-main);
 
   .section-center {
     display: flex;
@@ -73,6 +76,10 @@
     width: 100%;
     max-width: 500px;
     margin-top: -3rem; //fallback
+  }
+
+  .drone {
+    animation: mover 1s alternate infinite;
   }
 
   p {
@@ -93,7 +100,7 @@
   }
 }
 
-.section-drone::after {
+.section-banner::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -140,8 +147,23 @@
   }
 }
 
+// SECTION-BANNER--WHATSAPP
+.section-banner--whatsapp {
+  padding-bottom: 0.25rem;
+
+  img {
+    max-width: 100px;
+    max-height: 200px;
+  }
+
+  p {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 48rem) {
-  .section-drone {
+  .section-banner {
     padding: 0;
 
     .section-center {
@@ -151,6 +173,13 @@
 
     p {
       margin: 0;
+    }
+  }
+
+  .section-banner--whatsapp {
+    .section-center {
+      flex-direction: row;
+      justify-content: space-around;
     }
   }
 
