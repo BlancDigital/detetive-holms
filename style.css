@@ -67,6 +67,12 @@ h6 {
   color: var(--clr-main);
 }
 
+h3 {
+  padding-bottom: 4rem;
+  font-size: var(--fs-xxlg);
+  text-align: center;
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -158,17 +164,36 @@ select {
   animation: pulse-gold 2s infinite;
 }
 
+.btn--full {
+  color: var(--clr-black);
+  background-color: var(--clr-main);
+}
+
 .btn:hover {
   background-color: var(--clr-main);
   opacity: 0.8;
 }
 
 .btn:focus-visible {
-  border: 0.375rem solid var(--clr-black);
+  border: 0.375rem solid var(--clr-white);
   outline: none;
   transform: scale(1.025);
 }
 
+@keyframes pulse-gold {
+  0% {
+    box-shadow: 0 0 0 0 rgba(210, 188, 95, 0.7);
+    transform: scale(0.99);
+  }
+  70% {
+    box-shadow: 0 0 0 0.3125em rgba(210, 188, 95, 0);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 0 0.3125em rgba(210, 188, 95, 0);
+    transform: scale(0.99);
+  }
+}
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
@@ -193,20 +218,6 @@ select {
   font-size: var(--fs-xs);
 }
 
-@keyframes pulse-gold {
-  0% {
-    box-shadow: 0 0 0 0 rgba(210, 188, 95, 0.7);
-    transform: scale(0.99);
-  }
-  70% {
-    box-shadow: 0 0 0 0.3125em rgba(210, 188, 95, 0);
-    transform: scale(1);
-  }
-  100% {
-    box-shadow: 0 0 0 0.3125em rgba(210, 188, 95, 0);
-    transform: scale(0.99);
-  }
-}
 #cursor {
   position: absolute;
   top: 50%;
@@ -258,6 +269,10 @@ select {
   gap: 2em;
   align-items: center;
   justify-content: center;
+}
+.section-hero .btn--full {
+  padding: 0.325em 0.65em;
+  margin-top: clamp(0.25rem, -0.0427rem + 1.4634vw, 1rem);
 }
 .section-hero .title-wrapper {
   display: flex;
@@ -314,9 +329,6 @@ select {
   max-width: 500px;
   margin-top: -3rem;
 }
-.section-banner .drone {
-  animation: mover 1s alternate infinite;
-}
 .section-banner p {
   margin-top: -1rem;
   font-size: var(--fs-md);
@@ -349,10 +361,13 @@ select {
   position: relative;
   padding: 11vh 0;
 }
-.section-services h3 {
-  padding-bottom: 4rem;
-  font-size: var(--fs-xxlg);
-  text-align: center;
+.section-services .btn {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.section-services .btn:nth-last-child(1) {
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
 .section-services .cards {
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
@@ -385,6 +400,24 @@ select {
   text-align: center;
 }
 
+.section-videos {
+  padding: 11vh 0;
+}
+.section-videos .videos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.section-videos .btn {
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 37.5rem) {
+  .section-videos .videos {
+    flex-direction: row;
+  }
+}
 @media screen and (min-width: 48rem) {
   .section-banner {
     padding: 0;
@@ -392,6 +425,9 @@ select {
   .section-banner .section-center {
     flex-direction: row-reverse;
     align-items: center;
+  }
+  .section-banner .drone {
+    animation: mover 1s alternate infinite;
   }
   .section-banner p {
     margin: 0;
