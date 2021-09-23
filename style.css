@@ -54,7 +54,7 @@ body {
   font-family: var(--ff-roboto);
   line-height: 1.5;
   color: white;
-  background-image: url(./public/images/bg-preto.jpg);
+  background-image: url(../public/images/bg-preto.jpg);
 }
 
 h1,
@@ -273,7 +273,7 @@ select {
   width: 200px;
   height: 200px;
   pointer-events: none;
-  background-image: url(./public/images/search-solid.svg);
+  background-image: url(../public/images/search-solid.svg);
   transition: 0.1s all linear;
   transform: translate(-50%, -50%);
 }
@@ -660,7 +660,7 @@ select,
 .section-banner {
   position: relative;
   padding-bottom: 2em;
-  background-image: url(./public/images/2.png);
+  background-image: url(../public/images/2.webp);
   background-attachment: fixed;
   background-position: center;
   border-block: 0.125rem solid var(--clr-main);
@@ -673,6 +673,10 @@ select,
   width: 100%;
   max-width: 500px;
   margin-top: -3rem;
+}
+.section-banner .drone {
+  -webkit-animation: mover 1s alternate infinite;
+  animation: mover 1s alternate infinite;
 }
 .section-banner p {
   margin-top: -1rem;
@@ -738,8 +742,8 @@ select,
   padding-bottom: 0.25rem;
 }
 .section-banner--whatsapp img {
-  max-width: 100px;
-  max-height: 200px;
+  max-width: 118px;
+  max-height: 201px;
 }
 .section-banner--whatsapp p {
   margin-top: 1rem;
@@ -787,10 +791,6 @@ select,
   .section-banner .section-center {
     flex-direction: row-reverse;
     align-items: center;
-  }
-  .section-banner .drone {
-    -webkit-animation: mover 1s alternate infinite;
-    animation: mover 1s alternate infinite;
   }
   .section-banner p {
     margin: 0;
