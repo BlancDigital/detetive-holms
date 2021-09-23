@@ -69,7 +69,7 @@
 .section-banner {
   position: relative;
   padding-bottom: 2em;
-  background-image: url(../public/images/2.png);
+  background-image: url(../public/images/2.webp);
   background-attachment: fixed;
   background-position: center;
   border-block: 0.125rem solid var(--clr-main);
@@ -83,6 +83,10 @@
     width: 100%;
     max-width: 500px;
     margin-top: -3rem; //fallback
+  }
+
+  .drone {
+    animation: mover 1s alternate infinite;
   }
 
   p {
@@ -159,8 +163,8 @@
   padding-bottom: 0.25rem;
 
   img {
-    max-width: 100px;
-    max-height: 200px;
+    max-width: 118px;
+    max-height: 201px;
   }
 
   p {
@@ -224,10 +228,6 @@
     .section-center {
       flex-direction: row-reverse;
       align-items: center;
-    }
-
-    .drone {
-      animation: mover 1s alternate infinite;
     }
 
     p {
