@@ -36,8 +36,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul[role=list],
+ol[role=list] {
   list-style: none;
 }
 
@@ -54,7 +54,8 @@ body {
   font-family: var(--ff-roboto);
   line-height: 1.5;
   color: white;
-  background-image: url(../public/images/bg-preto.jpg);
+  background-color: #333;
+  background-image: url(../public/images/bg-preto1.jpg);
 }
 
 h1,
@@ -76,7 +77,6 @@ h2 {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
 }
 
@@ -102,12 +102,10 @@ select {
   }
 
   *,
-  *::before,
-  *::after {
+*::before,
+*::after {
     transition-duration: 0.01ms !important;
-    -webkit-animation-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
   }
@@ -118,32 +116,14 @@ select {
   margin: 0 auto;
 }
 
-@-webkit-keyframes slideInRight {
-  0% {
-    visibility: visible;
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 @keyframes slideInRight {
   0% {
     visibility: visible;
+    -webkit-transform: translateX(100%);
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(0);
-  }
-}
-@-webkit-keyframes afr {
-  0% {
-    opacity: 0;
-    transform: translateX(3.125rem);
-  }
-  100% {
-    opacity: 1;
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -155,14 +135,6 @@ select {
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-@-webkit-keyframes mover {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-0.3125rem);
   }
 }
 @keyframes mover {
@@ -189,10 +161,8 @@ select {
   background: transparent;
   border: 0.375rem solid var(--clr-main);
   border-radius: 0.25em;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 0.375em 0.75em -0.125em,
-    rgba(0, 0, 0, 0.3) 0px 0.1875em 0.4375em -0.1875em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 0.375em 0.75em -0.125em, rgba(0, 0, 0, 0.3) 0px 0.1875em 0.4375em -0.1875em;
   transition: opacity 250ms ease-in, background-color 250ms ease-in;
-  -webkit-animation: pulse-gold 2s infinite;
   animation: pulse-gold 2s infinite;
 }
 
@@ -210,21 +180,6 @@ select {
   border: 0.375rem solid var(--clr-white);
   outline: none;
   transform: scale(1.025);
-}
-
-@-webkit-keyframes pulse-gold {
-  0% {
-    box-shadow: 0 0 0 0 rgba(210, 188, 95, 0.7);
-    transform: scale(0.99);
-  }
-  70% {
-    box-shadow: 0 0 0 0.3125em rgba(210, 188, 95, 0);
-    transform: scale(1);
-  }
-  100% {
-    box-shadow: 0 0 0 0.3125em rgba(210, 188, 95, 0);
-    transform: scale(0.99);
-  }
 }
 
 @keyframes pulse-gold {
@@ -340,7 +295,7 @@ select {
 
 @media screen and (min-width: 56.25rem) {
   #cursor,
-  #cursorFrame {
+#cursorFrame {
     display: initial;
   }
 }
@@ -389,7 +344,6 @@ select {
 }
 
 .modal__image-wrapper img {
-  -o-object-fit: cover;
   object-fit: cover;
   height: 100%;
   border-top-left-radius: 0.5em;
@@ -424,9 +378,7 @@ select {
   padding: 0;
   font-size: var(--ff-xs);
   color: var(--clr-black);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0.25em 0.375em -0.0625em,
-    rgba(0, 0, 0, 0.06) 0px 0.125rem 0.25em -0.0625em;
-  -webkit-animation: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0.25em 0.375em -0.0625em, rgba(0, 0, 0, 0.06) 0px 0.125rem 0.25em -0.0625em;
   animation: none;
 }
 
@@ -469,8 +421,6 @@ select {
   border: none;
   outline: none;
   /* A reset of styles, including removing the default dropdown arrow */
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -497,7 +447,6 @@ select {
   justify-self: end;
   width: 0.8em;
   height: 0.5em;
-  -webkit-clip-path: polygon(100% 0%, 0 0%, 50% 100%);
   clip-path: polygon(100% 0%, 0 0%, 50% 100%);
   content: "";
   background-color: var(--select-arrow);
@@ -604,7 +553,8 @@ select,
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  max-height: 100vh;
+  /* dots are lines */
 }
 .section-hero .section-center {
   display: flex;
@@ -632,29 +582,37 @@ select,
   font-size: var(--fs-md);
   text-align: center;
 }
+.section-hero .slider {
+  width: 100%;
+}
+.section-hero .slider .flickity-viewport {
+  padding-bottom: min(calc((9 / 16) * 100%), 100vh);
+}
+.section-hero .slider .flickity-page-dots {
+  bottom: 2%;
+}
+.section-hero .slider .flickity-page-dots .dot {
+  width: 2.5rem;
+  height: 0.25rem;
+  margin: 0;
+  background-color: var(--clr-white);
+  border-radius: 0;
+}
+.section-hero .slider .flickity-page-dots .dot + .dot {
+  margin-left: 0.2em;
+}
+.section-hero .slider__cell {
+  width: 100%;
+  height: 100%;
+}
+.section-hero .slider__cell img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 
 .section-cards {
   padding: 5.5vh 0 11vh 0;
-}
-
-.section-mouse {
-  position: relative;
-  display: grid;
-  place-content: center;
-  min-height: 100vh;
-  overflow: hidden;
-  text-align: center;
-  background-color: var(--clr-black);
-}
-.section-mouse .title {
-  font-size: var(--fs-xxlg);
-  color: white;
-}
-.section-mouse p {
-  position: relative;
-  z-index: 10;
-  font-size: var(--fs-md);
-  color: black;
 }
 
 .section-banner {
@@ -675,7 +633,6 @@ select,
   margin-top: -3rem;
 }
 .section-banner .drone {
-  -webkit-animation: mover 1s alternate infinite;
   animation: mover 1s alternate infinite;
 }
 .section-banner p {
@@ -723,11 +680,15 @@ select,
 }
 .section-services .cards__card {
   grid-template-rows: 16rem 1fr;
+  text-align: left;
+  transition: transform 300ms ease-in-out;
+}
+.section-services .cards__card:hover {
+  transform: scale(1.05);
 }
 .section-services .cards__card img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 0.25rem;
 }
@@ -748,6 +709,30 @@ select,
 .section-banner--whatsapp p {
   margin-top: 1rem;
   text-align: center;
+}
+
+.section-whatsapp {
+  padding: 11vh 0;
+}
+.section-whatsapp h2 {
+  padding-bottom: 2rem;
+}
+.section-whatsapp img {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.section-whatsapp blockquote {
+  display: flex;
+  justify-content: center;
+}
+.section-whatsapp p {
+  max-width: 75ch;
+  text-align: justify;
+}
+.section-whatsapp figcaption {
+  max-width: 75ch;
+  margin: 0 auto;
+  text-align: right;
 }
 
 .section-videos {
@@ -826,4 +811,4 @@ select,
   display: none;
 }
 
-/*# sourceMappingURL=to.css.map */
+/*# sourceMappingURL=style.css.map */
