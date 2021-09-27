@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  max-height: 100vh;
 
   .section-center {
     display: flex;
@@ -35,6 +35,42 @@
     font-size: var(--fs-md);
     text-align: center;
   }
+
+  .slider {
+    width: 100%;
+  }
+
+  .slider .flickity-viewport {
+    padding-bottom: min(calc((9 / 16) * 100%), 100vh);
+  }
+
+  // flickity dots
+  .slider .flickity-page-dots {
+    bottom: 2%;
+  }
+  /* dots are lines */
+  .slider .flickity-page-dots .dot {
+    width: 2.5rem;
+    height: 0.25rem;
+    margin: 0;
+    background-color: var(--clr-white);
+    border-radius: 0;
+  }
+
+  .slider .flickity-page-dots .dot + .dot {
+    margin-left: 0.2em;
+  }
+
+  .slider__cell {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slider__cell img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 // SECTION-CARDS
@@ -43,27 +79,27 @@
 }
 
 // SECTION-MOUSE
-.section-mouse {
-  position: relative;
-  display: grid;
-  place-content: center;
-  min-height: 100vh;
-  overflow: hidden;
-  text-align: center;
-  background-color: var(--clr-black);
+// .section-mouse {
+//   position: relative;
+//   display: grid;
+//   place-content: center;
+//   min-height: 100vh;
+//   overflow: hidden;
+//   text-align: center;
+//   background-color: var(--clr-black);
 
-  .title {
-    font-size: var(--fs-xxlg);
-    color: white;
-  }
+//   .title {
+//     font-size: var(--fs-xxlg);
+//     color: white;
+//   }
 
-  p {
-    position: relative;
-    z-index: 10;
-    font-size: var(--fs-md);
-    color: black;
-  }
-}
+//   p {
+//     position: relative;
+//     z-index: 10;
+//     font-size: var(--fs-md);
+//     color: black;
+//   }
+// }
 
 // SECTION DRONE
 .section-banner {
@@ -140,6 +176,12 @@
 
   .cards__card {
     grid-template-rows: 16rem 1fr;
+    text-align: left;
+    transition: transform 300ms ease-in-out;
+  }
+
+  .cards__card:hover {
+    transform: scale(1.05);
   }
 
   .cards__card img {
@@ -170,6 +212,37 @@
   p {
     margin-top: 1rem;
     text-align: center;
+  }
+}
+
+// SECTION-WHATSAPP
+.section-whatsapp {
+  padding: 11vh 0;
+
+  h2 {
+    padding-bottom: 2rem;
+  }
+
+  img {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+  blockquote {
+    display: flex;
+    justify-content: center;
+  }
+
+  p {
+    // better readibility
+    max-width: 75ch;
+    text-align: justify;
+  }
+
+  figcaption {
+    max-width: 75ch;
+    margin: 0 auto;
+    text-align: right;
   }
 }
 
