@@ -176,15 +176,10 @@ $clr-gold: #d2bc5f;
 
   .desc {
     font-weight: 300;
+    line-height: 1.5;
     text-align: left;
-  }
-
-  .author {
-    padding-top: 0.5rem;
-    font-size: 0.8125rem;
-    font-weight: 600;
-    text-align: left;
-    text-transform: uppercase;
+    letter-spacing: -0.0027777778rem;
+    word-spacing: 0.002777;
   }
 }
 
