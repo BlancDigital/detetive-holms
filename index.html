@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- favicon -->
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./public/images/favicon.png"
+      type="image/x-icon"
+    />
 
     <!-- url -->
     <meta property="og:url" content="http://..." />
@@ -55,32 +59,41 @@
       id="exitFormTriggerActivator"
     ></div>
 
+    <a
+      class="franquia btn btn--full"
+      href="https://api.whatsapp.com/send?phone=5517997440070"
+      >Franquia</a
+    >
+
     <!-- #SECTION-HERO -->
     <section class="section-hero">
       <div
         class="slider"
-        data-flickity='{"wrapAround": true, "autoPlay": true, "setGallerySize": false}'
+        data-flickity='{"wrapAround": true, "autoPlay": true, "setGallerySize": false, "lazyLoad": true}'
       >
+        <div class="slider__cell">
+          <img src="./public/images/slider-0.png" alt="" />
+        </div>
         <div class="slider__cell">
           <img src="./public/images/slider-1.png" alt="" />
         </div>
         <div class="slider__cell">
-          <img src="./public/images/slider-2.png" alt="" />
+          <img data-flickity-lazyload="./public/images/slider-2.png" alt="" />
         </div>
         <div class="slider__cell">
-          <img src="./public/images/slider-3.png" alt="" />
+          <img data-flickity-lazyload="./public/images/slider-3.png" alt="" />
         </div>
         <div class="slider__cell">
-          <img src="./public/images/slider-4.png" alt="" />
+          <img data-flickity-lazyload="./public/images/slider-4.png" alt="" />
         </div>
         <div class="slider__cell">
-          <img src="./public/images/slider-5.png" alt="" />
+          <img data-flickity-lazyload="./public/images/slider-5.png" alt="" />
         </div>
       </div>
     </section>
 
     <!-- #SECTION HERO -->
-    <!-- <section class="section-hero">
+    <section class="section-hero--mobile">
       <div class="section-center">
         <a href="/" class="btn btn--full">Seja um franqueado!</a>
 
@@ -96,7 +109,7 @@
           <button class="btn btn--cta">Saiba mais</button>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- #SECTION SOBRE -->
     <section class="section-cards">
@@ -160,7 +173,12 @@
         <div class="cards">
           <!-- start of item -->
           <div class="cards__card">
-            <img src="./public/images/img-1.jpg" alt="" />
+            <img
+              src="./public/images/img-ph.png"
+              data-src="./public/images/img-1.jpg"
+              alt=""
+              class="lazy-loaded-image lazy"
+            />
 
             <div class="cards__card__text">
               <p class="title">Investigações Conjugais</p>
@@ -174,7 +192,12 @@
           <!-- end of item -->
           <!-- start of item -->
           <div class="cards__card">
-            <img src="./public/images/img-2.jpg" alt="" />
+            <img
+              src="./public/images/img-ph.png"
+              data-src="./public/images/img-2.jpg"
+              alt=""
+              class="lazy-loaded-image lazy"
+            />
 
             <div class="cards__card__text">
               <p class="title">Localização de Pessoas</p>
@@ -188,7 +211,12 @@
           <!-- end of item -->
           <!-- start of item -->
           <div class="cards__card">
-            <img src="./public/images/img-3.jpg" alt="" />
+            <img
+              src="./public/images/img-ph.png"
+              data-src="./public/images/img-3.jpg"
+              alt=""
+              class="lazy-loaded-image lazy"
+            />
 
             <div class="cards__card__text">
               <p class="title">Investigações Empresariais</p>
@@ -202,7 +230,12 @@
           <!-- end of item -->
           <!-- start of item -->
           <div class="cards__card">
-            <img src="./public/images/img-4.jpg" alt="" />
+            <img
+              src="./public/images/img-ph.png"
+              data-src="./public/images/img-4.jpg"
+              alt=""
+              class="lazy-loaded-image lazy"
+            />
 
             <div class="cards__card__text">
               <p class="title">Investigações Políticas</p>
@@ -216,7 +249,12 @@
           <!-- end of item -->
           <!-- start of item -->
           <div class="cards__card">
-            <img src="./public/images/img-5.jpg" alt="" />
+            <img
+              src="./public/images/img-ph.png"
+              data-src="./public/images/img-5.jpg"
+              alt=""
+              class="lazy-loaded-image lazy"
+            />
 
             <div class="cards__card__text">
               <p class="title">Investigações Perícia Digital</p>
@@ -230,7 +268,12 @@
           <!-- end of item -->
           <!-- start of item -->
           <div class="cards__card">
-            <img src="./public/images/img-6.jpg" alt="" />
+            <img
+              src="./public/images/img-ph.png"
+              data-src="./public/images/img-6.jpg"
+              alt=""
+              class="lazy-loaded-image lazy"
+            />
 
             <div class="cards__card__text">
               <p class="title">Investigações Criminais</p>
@@ -244,7 +287,12 @@
           <!-- end of item -->
           <!-- start of item -->
           <div class="cards__card">
-            <img src="./public/images/img-7.jpg" alt="" />
+            <img
+              src="./public/images/img-ph.png"
+              data-src="./public/images/img-7.jpg"
+              alt=""
+              class="lazy-loaded-image lazy"
+            />
 
             <div class="cards__card__text">
               <p class="title">Filhos, Familiares e Amigos</p>
@@ -258,7 +306,12 @@
           <!-- end of item -->
           <!-- start of item -->
           <div class="cards__card">
-            <img src="./public/images/img-8.jpg" alt="" />
+            <img
+              src="./public/images/img-ph.png"
+              data-src="./public/images/img-8.jpg"
+              alt=""
+              class="lazy-loaded-image lazy"
+            />
 
             <div class="cards__card__text">
               <p class="title">Softwares Aplicativos de Mensagens</p>
@@ -279,7 +332,12 @@
     <!-- #SECTION-BANNER--WHATSAPP -->
     <section class="section-banner section-banner--whatsapp">
       <div class="section-center">
-        <img src="./public/images/celular_1.png" alt="" />
+        <img
+          src="./public/images/img-ph.png"
+          data-src="./public/images/celular_1.png"
+          alt=""
+          class="lazy-loaded-image lazy"
+        />
         <p>
           As formas de descobrir a infidelidade também estão ao alcance das mãos
           em dispositivos móveis.
@@ -289,7 +347,12 @@
 
     <section class="section-whatsapp section-center">
       <h2>Softwares de aplicativo de Mensagens</h2>
-      <img src="./public/images/digital.png" alt="" />
+      <img
+        src="./public/images/img-ph.png"
+        data-src="./public/images/digital.png"
+        alt=""
+        class="lazy-loaded-image lazy"
+      />
       <figure>
         <blockquote>
           <p>
@@ -423,7 +486,7 @@
             </div>
 
             <div class="depoimento__text">
-              <p class="title">Ótimo investigação</p>
+              <p class="title">Ótima investigação</p>
               <p class="desc">
                 Sempre tinha dúvidas sobre o trabalho de um detetive. Contratei
                 e me surpreendi positivamente
@@ -685,16 +748,24 @@
       </div>
     </div>
 
+    <div class="whatsapp" id="whatsappPopup">
+      <a href="https://api.whatsapp.com/send?phone=5517997440070"
+        ><img
+          src="./public/images/whatsapp-brands.svg"
+          alt="Clique para entrar em contato"
+      /></a>
+    </div>
+    <!-- <div id="tooltip" role="tooltip">Abrir whatsapp</div> -->
+
     <footer class="footer">
       <div class="section-center">
         <p>Feito com 💛 por Blanc Digital</p>
       </div>
     </footer>
 
-    <section class="teste"></section>
-
     <script src="./libs/lite-youtube/lite-ytb-embed.js" async defer></script>
     <script src="./libs/flickity/flickity.pkgd.min.js" async defer></script>
+    <!-- <script src="https://unpkg.com/@popperjs/core@2"></script> -->
 
     <script src="./main.js"></script>
   </body>
