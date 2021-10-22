@@ -4,17 +4,15 @@
 $nomeremetente     = $_POST['name-form'];
 $emailremetente    = trim($_POST['email-form']);
 $telefone      	   = $_POST['cellphone-form'];
-$area              = $_POST['area-form'];
-$emaildestinatario = 'admin@blancmarketingdigital.com.br'; // Digite seu e-mail aqui, lembrando que o e-mail deve estar em seu servidor web
+$emaildestinatario = 'contato@holmsdetetive.com.br, leads@blancmarketingdigital.com.br'; // Digite seu e-mail aqui, lembrando que o e-mail deve estar em seu servidor web
  
  
-/* Montando a motorizado a ser enviada no corpo do e-mail. */
+/*A ser enviado no corpo do e-mail. */
 $wghHTML = '<strong>Formulário de Contato</strong>
 
 <p><b>Nome:</b>                     '.$nomeremetente.'  </p>
 <p><b>E-Mail:</b>                   '.$emailremetente.' </p>
 <p><b>Telefone:</b>                 '.$telefone.'       </p>
-<p><b>Metragem da construção:</b>   '.$area.'           </p>
 <hr>';
 
 
